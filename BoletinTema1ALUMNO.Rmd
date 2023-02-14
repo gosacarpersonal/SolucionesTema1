@@ -137,6 +137,18 @@ commonAnimals
 e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo de animales son?
 
 ```{r}
+# e. Usamos setdiff y rownames para saber qué animales no se encuentran en los dos conjuntos al mismo tiempo
+
+# Primero vemos qué animales del conjunto "mammals" NO se encuentran en el conjunto "Animals2"
+setdiff(rownames(mammals), rownames(Animals2))
+# Luego vemos qué animales del conjunto "Animals2" NO se encuentran en el conjunto "mammals"
+setdiff(rownames(Animals2), rownames(mammals))
+# Usar rownames y colnames es necesario para que se muestren los animales
+
+# En total son 9 animales ya que "Arctic fox" y "Artic ground squirrel" están repetidos en los dos setdiff.
+
+# Los del primer setdiff son animales mamíferos (por estar en el conjunto "mammals")
+# Los del segundo setdiff son más variados, incluyendo dinosaurios y mamíferos.
 ```
 
 e.  Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
