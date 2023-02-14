@@ -127,6 +127,11 @@ colnames(Animals2)
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
 
 ```{r}
+#d. Creamos la variable commonAnimals para almacenar los animales de los dos conjuntos de datos usando la función intersect
+commonAnimals <- intersect(mammals, Animals2)
+
+# Llamamos a la variable commonAnimals para visualizar qué animales hemos almacenado
+commonAnimals
 ```
 
 e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo de animales son?
