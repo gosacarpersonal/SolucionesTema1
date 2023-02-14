@@ -113,6 +113,17 @@ str(Animals2)
 ```
 
 c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
+```{r}
+#c.
+# Mostramos los nombres de las filas de los conjuntos de datos
+rownames(mammals)
+rownames(Animals2)
+
+# Mostramos los nombres de las columnas de los conjuntos de datos
+colnames(mammals)
+colnames(Animals2)
+```
+
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
 
 ```{r}
