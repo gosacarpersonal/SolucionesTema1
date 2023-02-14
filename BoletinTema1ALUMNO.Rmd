@@ -79,12 +79,21 @@ package.check <- lapply(packages, FUN = function(x) {
 <!-- -->
 
 a.  Mira la las características de ambos conjuntos usando la ayuda.
+```{r}
+# a. Podemos mirar las características de los conjuntos con el comando "summarise"o también poniendo en la consola "?conjunto".
+# Características de los conjuntos a partir de "summarise":
+summarise(mammals)
+summarise(Animals2)
+
+# Características de los conjuntos a partir de la consola:
+?mammals
+# La información proporcionada por la consola es: A data frame with average brain and body weights for 62 species of land mammals.
+
+?Animals2
+# La información proporcionada por la consola es: A data frame with average brain and body weights for 62 species of land mammals and three others. Note that this is simply the union of Animals and mammals.
+```
 b.  Usa las funciones **dim, head, tail, str** para una primera visión de los conjuntos de datos.
 c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
-
-```{r}
-```
-
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
 
 ```{r}
