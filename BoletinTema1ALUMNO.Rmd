@@ -93,6 +93,25 @@ summarise(Animals2)
 # La información proporcionada por la consola es: A data frame with average brain and body weights for 62 species of land mammals and three others. Note that this is simply the union of Animals and mammals.
 ```
 b.  Usa las funciones **dim, head, tail, str** para una primera visión de los conjuntos de datos.
+```{r}
+# b.
+# Usamos dim 
+dim(mammals)
+dim(Animals2)
+
+# Usamos head
+head(mammals)
+head(Animals2)
+
+# Usamos tail
+tail(mammals)
+tail(Animals2)
+
+# Usamos str
+str(mammals)
+str(Animals2)
+```
+
 c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
 
