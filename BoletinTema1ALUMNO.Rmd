@@ -194,6 +194,15 @@ head(libReturn$results, n=5)
 4.  En las transparencias del tema 1 se citan los primeros pasos a seguir cuando se analiza un nuevo conjunto de datos.
 
     a.  Determina las tres primeras etapas para el conjunto de datos **cabbages** del paquete **MASS**
+```{r}
+# a. Las 3 primeras etapas para un conjunto de datos, Importación, Preparación de los Datos y Transformación, se basan en las funciones "head", "dim", "tail", "glimpse" y "str"
+head(cabbages)
+dim(cabbages)
+tail(cabbages)
+glimpse(cabbages)
+str(cabbages)
+```
+    
     b.  Puedes determinar el número de valores perdidos (almacenados como **NA** en R) usando la función **is.na**. Determina el número de valores perdidos para cada una de las variables del conjunto **cabbages**.
     c.  Repite los apartados anteriores con el conjunto de datos **Chile** del paquete **car**.
     d.  Utiliza la función **summary**, sobre **cabbages** y **Chile** y observa como, además de otros estadísticos, también devuelve el número de valores perdidos de cada variable.
