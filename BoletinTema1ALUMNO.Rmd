@@ -204,10 +204,37 @@ str(cabbages)
 ```
     
     b.  Puedes determinar el número de valores perdidos (almacenados como **NA** en R) usando la función **is.na**. Determina el número de valores perdidos para cada una de las variables del conjunto **cabbages**.
+```{r}
+# b. Determinamos los valores perdidos del conjunto de datos "cabbages"
+any(is.na(cabbages))
+# Como vemos, no hay ningún valor perdido en el conjunto "cabbages"
+
+# Podemos verlo de una forma más simplificada de la siguiente forma:
+colSums(sapply(cabbages, is.na))
+```
+    
     c.  Repite los apartados anteriores con el conjunto de datos **Chile** del paquete **car**.
+```{r}
+# c. Repetimos todo lo anterior con el conjunto de datos "Chile"
+head(Chile)
+dim(Chile)
+tail(Chile)
+glimpse(Chile)
+str(Chile)
+
+any(is.na(Chile))
+colSums(sapply(Chile, is.na))
+# Como vemos, en este conjunto de datos sí tiene valores perdidos, en total son: 1+11+98+17+168 = 295
+```
+    
     d.  Utiliza la función **summary**, sobre **cabbages** y **Chile** y observa como, además de otros estadísticos, también devuelve el número de valores perdidos de cada variable.
 
 ```{r}
+# d. Utilizamos la función summary sobre los conjuntos de datos
+summary(cabbages)
+summary(Chile)
+
+# Como habíamos visto en el apartado anterior, el conjunto de datos "cabbages" no tiene nungún NA's. En cambio, el conjunto de datos "Chile" sí tiene.
 ```
 
 5.  Muchas pruebas estadísticas suponen que los datos siguen una distribución Gaussiana. Utiliza la aproximación visual proporcionada por **qqPlot** para determinar si podemos asumir que las variables **HeadWt** y **VitC** del conjunto **cabbages** verifican esta condición.
