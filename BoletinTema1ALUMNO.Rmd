@@ -277,11 +277,22 @@ a.  Utiliza un procedimiento análogo para determinar si se aprecia una relació
 # a. Siguiendo la estructura del ejemplo, mostramos un gráfico con la relación lineal
 #Diagrama de dispersión global.
 plot(cabbages$VitC, cabbages$HeadWt)
-
 ```
 b.  Repite el apartado anterior, pero obteniendo un modelo para cada una de las dos variedades de calabaza, **Cult**. Ver[Parámetros básicos plot](https://www.statmethods.net/advgraphs/parameters.html).
 
 ```{r}
+# b. Ahora repetimos el apartado anterior, siguiendo la misma estructura que el ejemplo, con las dos variedades de calabaza
+plot(cabbages$VitC, cabbages$HeadWt, pch=c(6,16)[cabbages$Cult])
+
+# Así podemos distinguir los dos tipos según si son puntos o triángulos
+legend(x="topright",legend=c("Cult = c39","Cult = c52"), pch=c(6,16))
+
+# Además, planteamos dos modelos lineales distintos para cada variedad
+Modelo1 <- lm(HeadWt ~ VitC, data = cabbages, subset = which(Cult == "c39"))
+Modelo2 <- lm(HeadWt ~ VitC, data = cabbages, subset = which(Cult == "c52"))
+# Representamos las rectas correspondientes a cada modelo lineal
+abline(Modelo1, lty=2)
+abline(Modelo2)
 ```
 
 c.  Usa **summary** con cada uno de los modelos obtenidos y observa **Coefficients**. Dado que hemos planteado un modelo $y=mx+n$, donde $y=VitC$ y $x=HeadWt$. La función **lm** nos permite obtener **(Intercept)**; **n** y la pendiente **HeadWt**; **m** (además de otros parámetros adicionales que evalúan la caracterísiticas del modelo). Observa que en todos los casos, la pendiene es negativa indicando que las calabazas de más peso contienen menos vitamina C. No te preocupes por el resto de parámetros del modelo, por el momento.
