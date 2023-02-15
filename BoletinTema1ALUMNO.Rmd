@@ -277,6 +277,7 @@ a.  Utiliza un procedimiento análogo para determinar si se aprecia una relació
 # a. Siguiendo la estructura del ejemplo, mostramos un gráfico con la relación lineal
 #Diagrama de dispersión global.
 plot(cabbages$VitC, cabbages$HeadWt)
+
 ```
 b.  Repite el apartado anterior, pero obteniendo un modelo para cada una de las dos variedades de calabaza, **Cult**. Ver[Parámetros básicos plot](https://www.statmethods.net/advgraphs/parameters.html).
 
