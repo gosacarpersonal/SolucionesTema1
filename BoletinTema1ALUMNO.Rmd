@@ -240,6 +240,11 @@ summary(Chile)
 5.  Muchas pruebas estadísticas suponen que los datos siguen una distribución Gaussiana. Utiliza la aproximación visual proporcionada por **qqPlot** para determinar si podemos asumir que las variables **HeadWt** y **VitC** del conjunto **cabbages** verifican esta condición.
 
 ```{r}
+# Vamos a observar si las variables "HeadWt" y "VitC" del conjunto de datos "cabbages" tienen una distribución de los datos Gaussiana
+qqPlot(cabbages$HeadWt)
+qqPlot(cabbages$VitC)
+
+# Podemos ver que sí cumplen la distribución Gaussiana, aun que no se aprecien las líneas discontínuas, todos los datos están contenidos en el área de distribución Gaussiana. En el conjunto "VitC" los datos están más agrupados en el centro, en cambio el conjunto "HeadWt" tiene algunos datos cerca de los límites del área.
 ```
 
 6.  Una representación habitual, para determinar la distribución de los datos de una variable cuantitativa es el histograma (**hist**). Determina, de forma aproximada, utilizando el histograma, si hay diferencias entre los contenidos de vitamina C (**VitC**), para las diferentes variedades de calabaza (variable **Cult**), en el conjunto de datos **cabbages**.
