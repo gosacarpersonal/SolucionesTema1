@@ -298,4 +298,21 @@ abline(Modelo2)
 c.  Usa **summary** con cada uno de los modelos obtenidos y observa **Coefficients**. Dado que hemos planteado un modelo $y=mx+n$, donde $y=VitC$ y $x=HeadWt$. La función **lm** nos permite obtener **(Intercept)**; **n** y la pendiente **HeadWt**; **m** (además de otros parámetros adicionales que evalúan la caracterísiticas del modelo). Observa que en todos los casos, la pendiene es negativa indicando que las calabazas de más peso contienen menos vitamina C. No te preocupes por el resto de parámetros del modelo, por el momento.
 
 ```{r}
+# c. Utilizamos summary en cada modelo y observamos "Coefficients"
+summary(Modelo1)
+summary(Modelo2)
+
+# Siendo los coeficientes de "Modelo1":
+# Coefficients:
+#            Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)  5.88152    0.95355   6.168 1.17e-06 ***
+# VitC        -0.05776    0.01835  -3.148  0.00388 ** 
+
+# Y los de "Modelo2":
+# Coefficients:
+#            Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)  6.67108    0.91908   7.258 6.68e-08 ***
+# VitC        -0.06818    0.01415  -4.817 4.57e-05 ***
+
+# Es por ello que obtenemos los resultados mencionados en el enunciado. Como que las pendientes son negativas.
 ```
