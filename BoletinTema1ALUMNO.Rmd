@@ -272,11 +272,12 @@ abline(Model2)
 # He tenido que eliminar un "\" que había en "plot(whiteside$Temp, whiteside$Gas, pch=c(6,16)[whiteside$Insul])" para que no diera el error:
 # Error: unexpected '\\' in "plot(whiteside$Temp, whiteside$Gas, pch=c(6,16)[whiteside\"
 ```
-
-```{r,echo=T,include=T,eval=F}
-```
-
 a.  Utiliza un procedimiento análogo para determinar si se aprecia una relación lineal entre los niveles de vitamina C, **VitC** en función del peso de la calabaza, **HeadWt**, en el conjunto de datos **cabbages**.
+```{r,echo=T,include=T,eval=F}
+# a. Siguiendo la estructura del ejemplo, mostramos un gráfico con la relación lineal
+#Diagrama de dispersión global.
+plot(cabbages$VitC, cabbages$HeadWt)
+```
 b.  Repite el apartado anterior, pero obteniendo un modelo para cada una de las dos variedades de calabaza, **Cult**. Ver[Parámetros básicos plot](https://www.statmethods.net/advgraphs/parameters.html).
 
 ```{r}
